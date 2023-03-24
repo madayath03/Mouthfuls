@@ -14,6 +14,8 @@
 </head>
 
 <body>
+
+
     <header>
         <a href="#" class="logo">Mouthfuls<span>.</span> </a>
         <div class="menutoggle" onclick="togglemenu();" type="button"></div>
@@ -270,7 +272,8 @@
                 <textarea type="text" placeholder="Write your message here"></textarea>
             </div>
             <div class="inputbox">
-                <input type="submit" onclick="formcheck()" value="Send">
+                <input type="submit" onclick="send1()" value="Send">
+                <div id="senderror-message"></div>
             </div>
         </div>
     </section>
@@ -284,6 +287,10 @@
 
 
     <script>
+
+        emailval = false
+        mobileval = false
+        nameval = false
         window.addEventListener("scroll", function () {
             const header = document.querySelector("header");
             header.classList.toggle("sticky", window.scrollY > 0);
@@ -294,7 +301,6 @@
 
         // Get the error message element from the DOM
         const errorMessage = document.getElementById('error-message');
-
         // Add an event listener to the email input element to validate the email
         emailInput.addEventListener('blur', function () {
             // Get the value of the email input
@@ -302,14 +308,15 @@
 
             // Define a regular expression to check if the email is valid
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
             // Check if the email matches the regular expression
             if (!emailRegex.test(email)) {
                 // Display an error message if the email is not valid
                 errorMessage.textContent = 'Invalid Email';
+                emailval = false
             } else {
                 // Clear the error message if the email is valid
                 errorMessage.textContent = '';
+                emailval = true
             }
         });
 
@@ -318,9 +325,8 @@
 
         // Get the error message element from the DOM
         const mobileerrorMessage = document.getElementById('mobileerror-message');
-
         // Add an event listener to the mobile number input element to validate the number
-        mobileInput.addEventListener('blur', function () {
+        mobileInput.addEventListener('blur', function mobile() {
             // Get the value of the mobile number input
             const mobileNumber = mobileInput.value.trim();
 
@@ -331,9 +337,11 @@
             if (!mobileRegex.test(mobileNumber)) {
                 // Display an error message if the mobile is not valid
                 mobileerrorMessage.textContent = 'Invalid Mobile';
+                mobileval = false
             } else {
                 // Clear the error message if the mobile is valid
                 mobileerrorMessage.textContent = '';
+                mobileval = true
             }
         });
 
@@ -345,7 +353,7 @@
 
 
         // Add an event listener to the name input element to validate the name
-        nameInput.addEventListener('blur', function () {
+        nameInput.addEventListener('blur', function name() {
             // Get the value of the name input
             const name = nameInput.value.trim();
 
@@ -356,9 +364,11 @@
             if (!nameRegex.test(name)) {
                 // Display an error message if the name is not valid
                 nameerrorMessage.textContent = 'Invalid Name';
+                nameval = false
             } else {
                 // Clear the error message if the name is valid
                 nameerrorMessage.textContent = '';
+                nameval = true
             }
         });
 
@@ -385,18 +395,25 @@
             });
         }
 
-        function formcheck() {
-            const emailInput = document.getElementById('email');
-            const emailError = document.getElementById('email-error');
+        // alert("Thanks for contacting Us")
+        // redirect to 0,0 location
 
-            if (!emailInput.checkValidity()) {
-                emailInput.classList.add('error');
-                // emailError.style.display = 'block';
-            } else {
-                emailInput.classList.remove('error');
-                emailError.style.display = 'none';
+        // Redirect to the top of the page
+        // window.location.href = '#banner';
+
+
+        function send1() {
+            const senderrorMessage = document.getElementById('senderror-message');
+            if (emailval == true && mobileval == true && nameval == true) {
+                alert("Thanks for contacting Us")
+                window.location.reload();
+
+            }
+            else {
+                senderrorMessage.textContent = 'Please check your input';
             }
         }
+
 
 
     </script>

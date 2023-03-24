@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">Mouthfuls<span>.</span> </a>
+        <div class="menutoggle" onclick="togglemenu();" type="button"></div>
+        <ul class="navigation">
+            <li><a href="#banner" onclick="togglemenu();" type="button">Home</a></li>
+            <li><a href="#about" onclick="togglemenu();" type="button">About</a></li>
+            <li><a href="#menu" onclick="togglemenu()" type="button">Menu</a></li>
+            <li><a href="#expert" onclick="togglemenu()" type="button">Expert</a></li>
+            <li><a href="#testimonials" onclick="togglemenu()" type="button">Testimonials</a></li>
+            <li><a href="#contact" onclick="togglemenu()" type="button">Contact</a></li>
+        </ul>
+    </header>
+    <section class="banner" id="banner">
+        <div class="content">
+            <h2>Always Choose Good</h2>
+            <p>At Mouthfuls, we believe that every bite should be a flavor-packed adventure. Our passion for delicious
+                food is evident in every dish we serve, and we're committed to using only the freshest, highest-quality
+                ingredients.
+            </p>
+            <a class="btn" href="#menu">Our Menu</a>
+        </div>
+    </section>
+    <section class="about" id="about">
+        <div class="row">
+            <div class="col50">
+                <h2 class="titletext">
+                    <span>A</span>bout Us
+                </h2>
+                <p>At Mouthfuls, we believe that food is more than just sustenance - it's an experience. We strive to
+                    create an environment
+                    that is warm and welcoming, where our customers can enjoy their meals in a comfortable and relaxed
+                    atmosphere.<br><br>
+                    Our goal is to make every customer feel like they are part of our community, where they can come to
+                    enjoy good food and
+                    good company. We take pride in our commitment to sustainability and ethical sourcing, and work
+                    closely with local
+                    farmers and suppliers to ensure that we are doing our part to support the environment and the local
+                    economy. At
+                    Mouthfuls, we are dedicated to providing a food experience that is not only delicious, but also
+                    socially and
+                    environmentally responsible.</p>
+            </div>
+            <div class="col50">
+                <div class="imgbx">
+                    <img src="serve.jpg" alt="No image">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="menu" id="menu">
+        <div class="title">
+            <h2 class="titletext">Our <span>M</span>enu</h2>
+            <p>"Indulge in a symphony of flavors with our delectable menu!"</p>
+        </div>
+        <div class="content">
+            <div class="box">
+                <div class="imgbx">
+                    <img src="./savory bites.jpg" alt="No image">
+                </div>
+                <div class="text">
+                    <h3>Savory Bites</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgbx">
+                    <img src="./sweet treats.jpg" alt="No image">
+                </div>
+                <div class="text">
+                    <h3>Sweet Treats</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgbx">
+                    <img src="./healthy eats.jpg" alt="No image">
+                </div>
+                <div class="text">
+                    <h3>Healthy Eats</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgbx">
+                    <img src="./global cuisine.jpg" alt="No image">
+                </div>
+                <div class="text">
+                    <h3>Global Cuisine</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgbx">
+                    <img src="./gourmet grub.jpg" alt="No image">
+                </div>
+                <div class="text">
+                    <h3>Gourmet Grub</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgbx">
+                    <img src="./vegan vibes.jpg" alt="No image">
+                </div>
+                <div class="text">
+                    <h3>Vegan Vibes</h3>
+                </div>
+            </div>
+            <div class="box" id="hidden">
+                <div class="imgbx">
+                    <img src="./quick bites.jpg" alt="No image">
+                </div>
+                <div class="text">
+                    <h3>Quick Bites</h3>
+                </div>
+            </div>
+            <div class="box" id="hidden">
+                <div class="imgbx">
+                    <img src="./comfort food.jpg" alt="No image">
+                </div>
+                <div class="text">
+                    <h3>Comfort Food</h3>
+                </div>
+            </div>
+            <div class="box" id="hidden">
+                <div class="imgbx">
+                    <img src="./gluten free.jpg" alt="No image">
+                </div>
+                <div class="text">
+                    <h3>Gluten-Free Goodness</h3>
+                </div>
+            </div>
+            <div class="box" id="hidden">
+                <div class="imgbx">
+                    <img src="./seafood sensations.jpg" alt="No image">
+                </div>
+                <div class="text">
+                    <h3>Seafood Sensations</h3>
+                </div>
+            </div>
+        </div>
+        <div class="title" id="view-all-btn">
+            <a type="button" class="btn" onclick="view()">View All</a>
+        </div>
+    </section>
+    <section class="expert" id="expert">
+        <div class="title">
+            <h2 class="titletext">Our Kitchen <span>E</span>xpert</h2>
+            <p>Meet our talented chefs who bring mouth-watering dishes to your table with their culinary skills.</p>
+        </div>
+        <div class="content">
+            <div class="box">
+                <div class="imgbx">
+                    <img src="chef1.jpg" alt="No Image">
+                </div>
+                <div class="text">
+                    <h3>Chef Manoharan Mangalodayam</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgbx">
+                    <img src="chef2.jpg" alt="No Image">
+                </div>
+                <div class="text">
+                    <h3>Chef Mannar Mathayi</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgbx">
+                    <img src="chef3.jpg" alt="No Image">
+                </div>
+                <div class="text">
+                    <h3>Chef Kochuthresia</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgbx">
+                    <img src="chef4.jpg" alt="No Image">
+                </div>
+                <div class="text">
+                    <h3>Chef Thurappan Kochunni</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="testimonials" id="testimonials">
+        <div class="titlewhite">
+            <h2 class="titletext">From <span>T</span>heir Heart</h2>
+            <p>Discover what our satisfied customers have to say about their dining experience at Mouthfuls.</p>
+        </div>
+        <div class="content">
+            <div class="box">
+                <div class="imgbx">
+                    <img src="ppl1.jfif" alt="No Image">
+                </div>
+                <div class="text">
+                    <p>Mouthfuls is a culinary gem in the heart of the city. From the moment we walked in, we were
+                        greeted with warm
+                        hospitality and treated to an exceptional dining experience. The menu was inventive and each
+                        dish was beautifully
+                        presented. We particularly enjoyed the seared scallops and the wagyu beef, which were cooked to
+                        perfection. Overall, an
+                        unforgettable dining experience.</p>
+                    <h3>Thulasi P.P.</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgbx">
+                    <img src="ppl2.jfif" alt="No Image">
+                </div>
+                <div class="text">
+                    <p>My experience at Mouthfuls was nothing short of amazing. The food was exquisite and the service
+                        was impeccable. The
+                        attention to detail and the quality of ingredients were apparent in every dish. I particularly
+                        enjoyed the chef's
+                        special tasting menu, which was a culinary journey through different flavor profiles and
+                        textures. Highly recommend this
+                        restaurant for anyone looking for a truly exceptional dining experience.</p>
+                    <h3>Barber Balan</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgbx">
+                    <img src="ppl3.jfif" alt="No Image">
+                </div>
+                <div class="text">
+                    <p>Mouthfuls exceeded all expectations! The restaurant ambiance was cozy and chic, and the menu
+                        offered a diverse range of
+                        dishes to suit every palate. We particularly enjoyed the lobster risotto and the crème brûlée,
+                        which were some of the
+                        best we've ever had. The staff was attentive and knowledgeable, and the chef even came out to
+                        chat with us about the
+                        menu. Overall, a fantastic dining experience that we can't wait to repeat</p>
+                    <h3>Kanchanamala</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <div class="title">
+            <h2 class="titletext"><span>C</span>ontact Us</h2>
+            <p>Have a question, comment, or suggestion? We'd love to hear from you!</p>
+        </div>
+        <div class="contactform">
+            <h3>Send Message</h3>
+            <div class="inputbox">
+                <input type="text" placeholder="Name" id="name-input">
+                <div id="nameerror-message"></div>
+            </div>
+            <div class="inputbox">
+                <input type="text" placeholder="Email" id="email" name="email" required>
+                <div id="error-message"></div>
+            </div>
+            <div class="inputbox">
+                <input type="text" placeholder="Phone Number" id="mobile-input" required>
+                <div id="mobileerror-message"></div>
+            </div>
+            <div class="inputbox">
+                <textarea type="text" placeholder="Write your message here"></textarea>
+            </div>
+            <div class="inputbox">
+                <input type="submit" onclick="formcheck()" value="Send">
+            </div>
+        </div>
+    </section>
+    <div class="copyrighttext">
+        <p>Copyright 2022 <a href="#">Harikrishnan M.</a> All Rights Reserved</p>
+    </div>
+
+
+
+
+
+
+    <script>
+        window.addEventListener("scroll", function () {
+            const header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);
+        });
+
+        // Get the email input element from the DOM
+        const emailInput = document.getElementById('email');
+
+        // Get the error message element from the DOM
+        const errorMessage = document.getElementById('error-message');
+
+        // Add an event listener to the email input element to validate the email
+        emailInput.addEventListener('blur', function () {
+            // Get the value of the email input
+            const email = emailInput.value.trim();
+
+            // Define a regular expression to check if the email is valid
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            // Check if the email matches the regular expression
+            if (!emailRegex.test(email)) {
+                // Display an error message if the email is not valid
+                errorMessage.textContent = 'Invalid Email';
+            } else {
+                // Clear the error message if the email is valid
+                errorMessage.textContent = '';
+            }
+        });
+
+        // Get the mobile number input element from the DOM
+        const mobileInput = document.getElementById('mobile-input');
+
+        // Get the error message element from the DOM
+        const mobileerrorMessage = document.getElementById('mobileerror-message');
+
+        // Add an event listener to the mobile number input element to validate the number
+        mobileInput.addEventListener('blur', function () {
+            // Get the value of the mobile number input
+            const mobileNumber = mobileInput.value.trim();
+
+            // Define a regular expression to check if the mobile number is valid
+            const mobileRegex = /^\d{10}$/;
+
+            // Check if the mobile number matches the regular expression
+            if (!mobileRegex.test(mobileNumber)) {
+                // Display an error message if the mobile is not valid
+                mobileerrorMessage.textContent = 'Invalid Mobile';
+            } else {
+                // Clear the error message if the mobile is valid
+                mobileerrorMessage.textContent = '';
+            }
+        });
+
+        // Get the name input element from the DOM
+        const nameInput = document.getElementById('name-input');
+
+        // Get the error message element from the DOM
+        const nameerrorMessage = document.getElementById('nameerror-message');
+
+
+        // Add an event listener to the name input element to validate the name
+        nameInput.addEventListener('blur', function () {
+            // Get the value of the name input
+            const name = nameInput.value.trim();
+
+            // Define a regular expression to check if the name is valid
+            const nameRegex = /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/;
+
+            // Check if the name matches the regular expression
+            if (!nameRegex.test(name)) {
+                // Display an error message if the name is not valid
+                nameerrorMessage.textContent = 'Invalid Name';
+            } else {
+                // Clear the error message if the name is valid
+                nameerrorMessage.textContent = '';
+            }
+        });
+
+
+        function togglemenu() {
+            const menutoggle = document.querySelector(".menutoggle");
+            const navigation = document.querySelector(".navigation");
+            menutoggle.classList.toggle("active");
+            navigation.classList.toggle("active");
+        }
+
+        function view() {
+            const viewAllButton = document.querySelector("#view-all-btn");
+            const hiddenItems = document.querySelectorAll("#hidden");
+
+            viewAllButton.addEventListener("click", function () {
+                // loop through the hidden items and display them
+                hiddenItems.forEach(function (item) {
+                    item.style.display = "block";
+                });
+
+                // hide the view all button
+                viewAllButton.style.display = "none";
+            });
+        }
+
+        function formcheck() {
+            const emailInput = document.getElementById('email');
+            const emailError = document.getElementById('email-error');
+
+            if (!emailInput.checkValidity()) {
+                emailInput.classList.add('error');
+                // emailError.style.display = 'block';
+            } else {
+                emailInput.classList.remove('error');
+                emailError.style.display = 'none';
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
